@@ -8,9 +8,34 @@ class Main {
     for(int i = 0; i < values.length; ++i) { values[i] = Integer.toString(i + 1); }
   }
 
+  // void miniMax(node, depth, maximizingPlayer) {
+  //   if(depth == 0 || node == terminal) {
+  //     return heuristic;
+  //   }
+  //
+  //   if(maximizingPlayer) {
+  //     bestValue = 0; // Supposed to be neg inf
+  //
+  //     for(each child of node) {
+  //       v = miniMax(child, depth - 1, false);
+  //       bestValue = Math.max(bestValue, v);
+  //     }
+  //
+  //     return bestValue;
+  //   } else { // Minimizing player
+  //     bestValue = 10000; // positive inf
+  //     for(each child of node) {
+  //       v = miniMax(child, depth - 1, true);
+  //       bestValue = Math.min(bestValue, v);
+  //     }
+  //
+  //     return bestValue;
+  //   }
+  // }
+
   void updateBoard(boolean human, int move) {
     if(human) values[move] = "X";
-    else values[move] = "o";
+    else values[move] = "O";
   }
 
   void drawBoard() {
